@@ -10,6 +10,10 @@
     <%= select_tag "author", options_from_collection_for_select(Author.all, "id", "name"), include_blank: true %>
     <%= submit_tag "Filter" %>
   <% end %>
+
+  <%= select_tag "date", options_for_select(["Today", "Old News"]), include_blank: true %>
+  <%= submit_tag "Filter" %>
+  <% end %>
 </div>
 
 <% @posts.each do |post| %>
